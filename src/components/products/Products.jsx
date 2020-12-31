@@ -49,8 +49,8 @@ const Products = (props) => {
         onChange={(e) => setPerPage(e.target.value)}
         style={{ width: "100px", height: "30px" }}
       >
-        <option value="2">Two</option>
-        <option value="10">Ten</option>
+        <option value="2">1</option>
+        <option value="10">5</option>
       </select>
       {userService.isLoggedIn() && (
         <Fab
