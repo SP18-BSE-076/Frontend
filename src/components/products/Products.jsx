@@ -56,7 +56,7 @@ const Products = (props) => {
         <Fab
           color="primary"
           aria-label="add"
-          paddingDown= "50rem"
+          paddingDown= "200rem"
           className={classes.addBtn}
           onClick={handleNewProductClick}
         >
