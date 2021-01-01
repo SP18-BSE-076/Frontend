@@ -54,8 +54,10 @@ const Products = (props) => {
       </select>
       {userService.isLoggedIn() && (
         <Fab
-          color="primary"
+          color="secondry"
           aria-label="add"
+          position="relative"
+          size="medium"
           className={classes.addBtn}
           onClick={handleNewProductClick}
         >
