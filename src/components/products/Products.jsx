@@ -49,15 +49,14 @@ const Products = (props) => {
         onChange={(e) => setPerPage(e.target.value)}
         style={{ width: "100px", height: "30px" }}
       >
-        <option value="2">1</option>
-        <option value="10">5</option>
+        <option value="1">1</option>
+        <option value="5">5</option>
       </select>
       {userService.isLoggedIn() && (
         <Fab
-          color="secondry"
+          color="primary"
           aria-label="add"
-          position="relative"
-          size="medium"
+          paddingDown= "50rem"
           className={classes.addBtn}
           onClick={handleNewProductClick}
         >
