@@ -22,7 +22,7 @@ const ContactUs = () => {
         <textarea className="form-control" id="message" placeholder="Message" row="5"></textarea>
         </div>
         <div className="text-center">
-        <button className="btn btn-lg btn-color cont-btn" style={{color:"white", backgroundColor:"black"}}>Submit</button>
+        <button href="/" className="btn btn-lg btn-color cont-btn" style={{color:"white", backgroundColor:"black"}}>Submit</button>
         </div>
         </form>
         </div>
