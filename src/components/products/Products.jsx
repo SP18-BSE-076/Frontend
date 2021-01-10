@@ -53,7 +53,12 @@ const useStyles = makeStyles((theme) => ({
         <option value="5">5</option>
       </select>
       {userService.isLoggedIn() && (
-        <Fab color="primary" aria-label="add" className={classes.addBtn} onClick={handlenewproduct}>
+        <Fab
+          color="primary"
+          aria-label="add"
+          className={classes.addBtn}
+          onClick={handleNewProductClick}
+        >
           <AddIcon />
         </Fab>
       )}
