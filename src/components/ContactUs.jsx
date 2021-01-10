@@ -1,13 +1,6 @@
   
 import React from 'react';
-const useStyles = makeStyles((theme) => ({
-  container: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "300px",
-  },
-}));
+
 const ContactUs = () => {
     return ( <div>
         <h1 className="text-center">
