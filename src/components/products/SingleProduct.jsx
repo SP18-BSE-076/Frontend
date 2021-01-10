@@ -8,7 +8,7 @@ const SingleProduct = (props) => {
   console.log(props);
   return (
     <Grid item xs={4}>
-      <img src={product.Link} alt="Product" width="50%"></img>
+      <img src={product.Link} alt="Product" width="50%" height="50%"></img>
       <h2>
         {product.name}{" "}
         {userService.isAdmin() && (
