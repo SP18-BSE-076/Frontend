@@ -6,6 +6,7 @@ import Auth from "../auth/Auth";
 const NewProduct = (props) => {
   const [name, setName] = React.useState("");
   const [price, setPrice] = React.useState(0);
+  const [Link,setLink] = React.useState("");
   return (
     <Auth>
       <Grid container spacing={3}>
@@ -30,6 +31,14 @@ const NewProduct = (props) => {
               setPrice(e.target.value);
             }}
           />
+          <TextField
+            label="Image Url"
+            fullWidth
+            value={Link}
+            onChange={(e) => {
+              setLink(e.target.value);
+            }}
+          />
         </Grid>
         <Grid item xs={3}></Grid>
         <Grid item xs={3}></Grid>
@@ -39,7 +48,7 @@ const NewProduct = (props) => {
             color="primary"
             onClick={(e) => {
               productService
-                .addProduct({ name, price })
+                .addProduct({ name, price, Link })
                 .then((data) => {
                   console.log(data);
                   props.history.push("/products");
@@ -49,7 +58,7 @@ const NewProduct = (props) => {
                 });
             }}
           >
-            Add New
+            Add New Product
           </Button>
         </Grid>
       </Grid>

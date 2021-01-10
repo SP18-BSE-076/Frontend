@@ -7,18 +7,20 @@ import Admin from "../auth/Admin";
 const UpdateProduct = (props) => {
   const [name, setName] = React.useState("");
   const [price, setPrice] = React.useState(0);
+  const [Link,setLink] = React.useState("");
   const id = props.match.params.id;
   React.useEffect(() => {
     productService.getSingleProduct(id).then((data) => {
       setName(data.name);
       setPrice(data.price);
+      setLink(data.Link);
     });
   }, []);
   return (
     <Admin>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <h1>Update Product</h1>
+          <h1>Update Existing Product</h1>
         </Grid>
         <Grid item xs={3}></Grid>
         <Grid item xs={6}>
@@ -38,6 +40,15 @@ const UpdateProduct = (props) => {
               setPrice(e.target.value);
             }}
           />
+          <TextField
+            label="Image url"
+            fullWidth
+            value={Link}
+            onChange={(e) => {
+              setLink(e.target.value);
+            }}
+          />
+          
         </Grid>
         <Grid item xs={3}></Grid>
         <Grid item xs={3}></Grid>
@@ -47,7 +58,7 @@ const UpdateProduct = (props) => {
             color="primary"
             onClick={(e) => {
               productService
-                .updateProduct(id, { name, price })
+                .updateProduct(id, { name, price, Link })
                 .then((data) => {
                   console.log(data);
                   props.history.push("/products");
@@ -57,7 +68,7 @@ const UpdateProduct = (props) => {
                 });
             }}
           >
-            Update
+            Update Product
           </Button>
         </Grid>
       </Grid>
