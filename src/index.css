@@ -111,8 +111,10 @@
   color: #ff912c;
 }
 h1 {
+  color: blue;
+  border: black;
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 20px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
