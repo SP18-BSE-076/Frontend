@@ -56,7 +56,6 @@ const Products = (props) => {
         <Fab
           color="primary"
           aria-label="add"
-          paddingDown= "100rem"
           className={classes.addBtn}
           onClick={handleNewProductClick}
         >
@@ -72,7 +71,7 @@ const Products = (props) => {
           ))}
         </Grid>
       )}
-      <Grid item xs={12}>
+      <Grid item xs={12} style={{marginTop : "30px",marginLeft:"550px"}}>
         <Pagination
           count={Math.ceil(total / perPage)}
           variant="outlined"
