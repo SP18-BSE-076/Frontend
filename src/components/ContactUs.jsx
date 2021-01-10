@@ -1,6 +1,16 @@
   
 import React from 'react';
-
+const useStyles = makeStyles((theme) => ({
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "300px",
+  },
+  child: {
+    width: "60%",
+  },
+}));
 const ContactUs = () => {
     return ( <div>
         <h1 className="text-center">
@@ -22,7 +32,7 @@ const ContactUs = () => {
         <textarea className="form-control" id="message" placeholder="Message" row="5"></textarea>
         </div>
         <div className="text-center">
-        <button href="/" className="btn btn-lg btn-color cont-btn" style={{color:"white", backgroundColor:"black"}}>Submit</button>
+        <button href="/" className="btn btn-lg btn-color cont-btn" style={{color:"white", backgroundColor:"green"}}>Submit</button>
         </div>
         </form>
         </div>
