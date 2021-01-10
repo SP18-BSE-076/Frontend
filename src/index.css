@@ -110,3 +110,9 @@
 .rating-stars ul > li.star.selected > i.fa {
   color: #ff912c;
 }
+h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 50px;
+}
