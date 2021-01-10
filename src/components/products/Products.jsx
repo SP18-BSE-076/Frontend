@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Products = (props) => {
+  const Products = (props) => {
   const [products, setProducts] = React.useState([]);
   const classes = useStyles();
   const page = props.match.params.page ? props.match.params.page : 1;
