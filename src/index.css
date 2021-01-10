@@ -4,6 +4,7 @@
   float: left;
   margin-top: 0px;
 }
+
 .back {
   background: black;
   color: white;
@@ -32,7 +33,6 @@
   animation-name: textRight;
   animation-duration: 5s;
 }
-
 @keyframes imgLeft {
   0% {
     transform: transalteX(-120px);

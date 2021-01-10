@@ -52,11 +52,11 @@ const useStyles = makeStyles((theme) => ({
         <option value="1">1</option>
         <option value="5">5</option>
       </select>
-      {userService.isLoggedIn() && 
+      {userService.isLoggedIn() && (
         <Fab color="primary" aria-label="add" className={classes.addBtn} onClick={handlenewproduct}>
           <AddIcon />
         </Fab>
-      }
+      )}
       {products.length == 0 ? (
         <p>There are no products</p>
       ) : (
