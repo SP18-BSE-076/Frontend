@@ -7,9 +7,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     height: "300px",
   },
-  child: {
-    width: "60%",
-  },
 }));
 const ContactUs = () => {
     return ( <div>
