@@ -6,6 +6,7 @@ const LandingPage = () => {
       
       <div>
       <video src="image/video1.mp4" autoPlay loop muted width="100%" height="100%"></video>
+      <button className="btns" buttonStyle= "">Get Started</button>
       </div>
     </div>
     
