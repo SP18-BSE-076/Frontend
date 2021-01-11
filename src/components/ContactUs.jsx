@@ -1,4 +1,3 @@
-  
 import React from 'react';
 
 const ContactUs = () => {
@@ -21,8 +20,12 @@ const ContactUs = () => {
         <label for="message">Message</label>
         <textarea className="form-control" id="message" placeholder="Message" row="5"></textarea>
         </div>
+        <div className="form-group form-check">
+        <input type="checkbox" className="form-check-input" id="check"></input>
+        <label className="form-check-label" for="check">Your'e not a Robot</label>
+        </div>
         <div className="text-center">
-        <button href="/" className="btn btn-lg btn-color cont-btn" style={{color:"white", backgroundColor:"green"}}>Submit</button>
+        <button className="btn btn-lg btn-color cont-btn" style={{color:"white", backgroundColor:"black"}}>Submit</button>
         </div>
         </form>
         </div>
@@ -30,4 +33,4 @@ const ContactUs = () => {
     </div> );
 }
  
-export default ContactUs;
+export default ContactUs
