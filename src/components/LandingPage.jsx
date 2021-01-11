@@ -5,7 +5,7 @@ const LandingPage = () => {
       <h1 class = "logo" ><img src="/image/logo.jpg" alt=""/>           A perfect Marketplace to Buy high resolution Images</h1>
       
       <div>
-      <img src="/image/image1.jpg" class="img-fluid" alt="Responsive image" width="100%" height="100%"/>
+      <video src="image/video1.mp4" autoPlay loop muted width="100%" height="100%"></video>
       </div>
     </div>
     
