@@ -9,7 +9,7 @@ const LandingPage = () => {
       <video src="image/video1.mp4" autoPlay loop muted width="100%" height="100%"></video>
       <video src="image/video2.mp4" autoPlay loop muted width="40%" height="40%"></video>
       </div>
-      <p>Every photographer draws inspiration from many different sources, and documentaries following a handful of the masters of the art are a fantastic starting point. We’ve sorted through the hundreds and picked our favourite examples of these geniuses at the top of their game. All of these documentaries can be watched online and most of them for free.</p>
+      <h3>Every photographer draws inspiration from many different sources, and documentaries following a handful of the masters of the art are a fantastic starting point. We’ve sorted through the hundreds and picked our favourite examples of these geniuses at the top of their game. All of these documentaries can be watched online and most of them for free.</h3>
     </div>
     
   );
