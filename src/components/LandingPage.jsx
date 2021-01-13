@@ -8,7 +8,6 @@ const LandingPage = () => {
       <div>
       <video src="image/video1.mp4" autoPlay loop muted width="100%" height="100%"></video>
       </div>
-      <h3>Every photographer draws inspiration from many different sources, and documentaries following a handful of the masters of the art are a fantastic starting point.</h3>
     </div>
     
   );
