@@ -1,33 +1,77 @@
-  
-import React from 'react';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { TextField, Button } from "@material-ui/core";
+import userService from "../../services/UserService";
 
-const ContactUs = () => {
-    return ( <div>
-        <h1 className="text-center">
-            Contact Us
-        </h1>
-        <section className="contact py-5">
-        <div className="container">
-        <form className="col-lg-6 offset-lg-3">
-        <div className="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" className="form-control" aria-describedby="emailHelp" placeholder="Email"></input>
-        </div>
-        <div className="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" className="form-control" placeholder="Name"></input>
-        </div>
-        <div className="form-group">
-        <label for="message">Message</label>
-        <textarea className="form-control" id="message" placeholder="Message" row="5"></textarea>
-        </div>
-        <div className="text-center">
-        <button href="/" className="btn btn-lg btn-color cont-btn" style={{color:"white", backgroundColor:"green"}}>Submit</button>
-        </div>
-        </form>
-        </div>
-        </section>
-    </div> );
-}
- 
+const useStyles = makeStyles((theme) => ({
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "300px",
+  },
+  child: {
+    width: "60%",
+  },
+}));
+const ContactUs = (props) => {
+  const classes = useStyles();
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  return (
+    <div className={classes.container}>
+      <div className={classes.child}>
+        <TextField
+          label="email"
+          fullWidth
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        />{" "}
+        <br />
+        <TextField
+          label="Name"
+          type="Name"
+          fullWidth
+          value={password}
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+        />{" "}
+        <br />
+        <br />
+        <TextField
+          label="Message"
+          type="Meassage"
+          fullWidth
+          value={password}
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+        />{" "}
+        <br />
+        <br />
+        <Button
+          variant="contained"
+          color="dark"
+          onClick={(e) => {
+            userService
+              .login(email, password)
+              .then((data) => {
+                console.log(data);
+                window.location.href = "/";
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          }}
+        >
+          Contact Us
+        </Button>
+      </div>
+    </div>
+  );
+};
+
 export default ContactUs;
