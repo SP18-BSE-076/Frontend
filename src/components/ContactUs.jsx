@@ -3,17 +3,6 @@ import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import { TextField, Button } from "@material-ui/core";
 import userService from "../../services/UserService";
-const useStyles = makeStyles((theme) => ({
-    container: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "300px",
-    },
-    child: {
-      width: "60%",
-    },
-  }));
 
 const ContactUs = () => {
     const classes = useStyles();
