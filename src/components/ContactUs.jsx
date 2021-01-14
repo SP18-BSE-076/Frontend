@@ -1,65 +1,33 @@
   
 import React from 'react';
-import { makeStyles } from "@material-ui/core/styles";
-import { TextField, Button } from "@material-ui/core";
-import userService from "../../services/UserService";
 
 const ContactUs = () => {
-    const classes = useStyles();
-    return (
-        <div className={classes.container}>
-          <div className={classes.child}>
-            <TextField
-              label="Email"
-              fullWidth
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-            />{" "}
-            <br />
-            <TextField
-              label="Name"
-              type="password"
-              fullWidth
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-            />{" "}
-            <br />
-            <br />
-            <TextField
-              label="Message"
-              type="password"
-              fullWidth
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-            />{" "}
-            <br />
-            <br />
-            <Button
-              variant="contained"
-              color="dark"
-              onClick={(e) => {
-                userService
-                  .login(email, password)
-                  .then((data) => {
-                    console.log(data);
-                    window.location.href = "/";
-                  })
-                  .catch((err) => {
-                    console.log(err);
-                  });
-              }}
-            >
-              Submit
-            </Button>
-          </div>
+    return ( <div>
+        <h1 className="text-center">
+            Contact Us
+        </h1>
+        <section className="contact py-5">
+        <div className="container">
+        <form className="col-lg-6 offset-lg-3">
+        <div className="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" className="form-control" aria-describedby="emailHelp" placeholder="Email"></input>
         </div>
-      );
+        <div className="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" className="form-control" placeholder="Name"></input>
+        </div>
+        <div className="form-group">
+        <label for="message">Message</label>
+        <textarea className="form-control" id="message" placeholder="Message" row="5"></textarea>
+        </div>
+        <div className="text-center">
+        <button href="/" className="btn btn-lg btn-color cont-btn" style={{color:"white", backgroundColor:"green"}}>Submit</button>
+        </div>
+        </form>
+        </div>
+        </section>
+    </div> );
 }
  
 export default ContactUs;
