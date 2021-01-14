@@ -43,7 +43,8 @@ const SingleProduct = (props) => {
           </>
         )}
       </h2>
-      <p>{product.price}</p>
+      <h5>Price</h5><p>{product.price}pkr</p>
+      <h5>Category</h5><p>{product.name}</p>
       <hr />
     </Grid>
   );
